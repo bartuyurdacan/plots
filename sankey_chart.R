@@ -10,7 +10,7 @@
 
 # 0) (Optional) Set working directory to Desktop
 # setwd("C:/Users/bartu/Desktop")
-
+devtools::install_github("davidsjoberg/ggsankey")
 # 1) Load required libraries
 library(tibble)     # for tribble()
 library(dplyr)      # for data manipulation
@@ -19,6 +19,7 @@ library(ggplot2)    # for plotting
 library(ggsankey)   # for geom_sankey_bump()
 library(shadowtext) # for geom_shadowtext()
 library(scales)     # for label_number()
+
 
 # 2) Create the data frame
 #    Values are in million Sm³
@@ -130,9 +131,3 @@ final_plot <- base_plot +
     bg.color = "grey99"
   ) +
   guides(fill = guide_legend(nrow = 2, byrow = TRUE))
-
-# 10) Save the script to the notebook environment
-file_path = "/mnt/data/natural_gas_sankey.R"
-with open(file_path, "w", encoding="utf-8") as f:
-  f.write(r_code)
-file_path
