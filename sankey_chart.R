@@ -1,5 +1,12 @@
 
+library(rsconnect)
 
+# Çalışma dizini = repo kökü (C:/Users/bartu/Desktop/sankey)
+rsconnect::writeManifest(
+  appPrimaryDoc = "sankey_chart.R",  # ana dosyanın tam adı
+  appMode       = "rscript",         # içerik tipi
+  quarto        = FALSE              # Quarto kontrolünü kapat
+)
 # -----------------------------------------------------------------------------
 # Natural Gas Market Overview Sankey Bump Chart
 # -----------------------------------------------------------------------------
